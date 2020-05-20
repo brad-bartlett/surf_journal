@@ -6,7 +6,7 @@ class CreateSessions < ActiveRecord::Migration[6.0]
       t.string :board
       t.string :description
 
-      t.timestamps
+      
     end
   end
 end

@@ -1,3 +1,3 @@
 class Beach < ApplicationRecord
-    has_many :transactions
+    has_many :sessions
 end

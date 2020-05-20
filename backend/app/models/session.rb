@@ -1,4 +1,4 @@
 class Session < ApplicationRecord
-    belongs_to :beaches
-    validates :description, presence: true
+    belongs_to :beach
+    
 end

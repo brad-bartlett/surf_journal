@@ -14,8 +14,7 @@ ActiveRecord::Schema.define(version: 2020_05_19_061759) do
 
   create_table "beaches", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.integer "beach_id"
   end
 
   create_table "sessions", force: :cascade do |t|
@@ -23,8 +22,6 @@ ActiveRecord::Schema.define(version: 2020_05_19_061759) do
     t.datetime "date"
     t.string "board"
     t.string "description"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
 end
