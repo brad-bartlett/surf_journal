@@ -6,8 +6,11 @@ class Api::v1:SessionsController < ApplicationController
     end
 
     def create
-        @session = Session.create(params[:session]]
+        @session = Session.new(session_params)
+        if @session.save
         render json: @session, status: 200
+        else
+            render json: {error:"Error logging session"}
     end
 
 
@@ -21,4 +24,13 @@ class Api::v1:SessionsController < ApplicationController
         @session.destroy!
         render json: @sessions, status: 200
     end
+
+    private
+
+    def session_params
+        params.require(:beach).permit(:date, :board, :description)
+    end
+
+
+    
 end
