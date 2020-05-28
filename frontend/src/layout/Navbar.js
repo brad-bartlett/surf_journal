@@ -7,7 +7,7 @@ import {
 
 
 
-export default function navbar() {
+export default function Navbar() {
     return (
     <Router>
         <div>
