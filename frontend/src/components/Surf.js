@@ -47,7 +47,7 @@ export default class Surf extends Component {
                         <input type="text" value={this.state.description} onChange={this.handleChange} />
                     </label><br/>
 
-                    <button type="submit" value="Submit"></button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
 
                 </form>  
             </div>
