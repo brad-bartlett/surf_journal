@@ -17,7 +17,7 @@ export default function Navbar() {
                         <Link exact to='/'>Home</Link>
                     </li>
                     <li>
-                        <Link to='/surf'>Surf Report</Link>
+                        <Link to='/surf'>Session Journal</Link>
                     </li>
                 </ul>
             </nav>

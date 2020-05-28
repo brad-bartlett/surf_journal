@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class Surf extends Component {
+export default class SessionForm extends Component {
     
     constructor(props) {
     super(props)
