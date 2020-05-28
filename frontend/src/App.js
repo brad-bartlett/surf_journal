@@ -1,17 +1,43 @@
-import React from 'react';
+import React from 'react'
 import './App.css';
 import Navbar from './layout/Navbar';
 import Surf from './components/SessionForm'
 
 
-function App() {
+class App extends React.Component() {
   
-  return (
+  constructor() {
+    super()
+    this.state={
+        datetime: `${new Date()}`,
+        board: '',
+        description: ''}
+
+      
+  }
+    
+
+    handleSubmit(e) {
+        alert('Submitted:' + this.state.value);
+        e.preventDefault()
+    }
+
+    handleChange(e) {
+        this.setState({
+            datetime: e.target.datetime,
+            board: e.target.board,
+            description: e.target.description
+        })
+    }
+
+
+  render() {
+    return (
     <div className="App">
       <Navbar />
-      <Surf />
+      <Surf handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
     </div> 
   );
-}
+}}
 
 export default App;

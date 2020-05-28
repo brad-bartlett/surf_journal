@@ -2,31 +2,6 @@ import React, { Component } from 'react'
 
 export default class SessionForm extends Component {
     
-    constructor(props) {
-    super(props)
-    this.state={
-        datetime: `${new Date()}`,
-        board: '',
-        description: ''}
-
-        this.handleChange = this.handleChange.bind(this);
-
-        this.handleSubmit = this.handleSubmit.bind(this);
-  }
-    
-
-    handleSubmit(e) {
-        alert('Submitted:' + this.state.value);
-        e.preventDefault()
-    }
-
-    handleChange(e) {
-        this.setState({
-            datetime: e.target.datetime,
-            board: e.target.board,
-            description: e.target.description
-        })
-    }
     
     render() {
         return (
