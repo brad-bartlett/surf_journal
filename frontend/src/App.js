@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css';
 import Navbar from './layout/Navbar';
-import Surf from './components/SessionForm'
+import SessionForm from './components/SessionForm'
 
 
 class App extends React.Component() {
@@ -35,7 +35,7 @@ class App extends React.Component() {
     return (
     <div className="App">
       <Navbar />
-      <Surf handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
+      <SessionForm handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
     </div> 
   );
 }}
