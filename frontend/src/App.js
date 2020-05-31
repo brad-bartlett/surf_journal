@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import './App.css';
 import Navbar from './layout/Navbar';
+import Sessions from './components/Sessions'
 import SessionForm from './components/SessionForm'
 
 
@@ -21,6 +22,7 @@ class App extends Component {
     return (
     <div className="App">
       <Navbar />
+      <Sessions />
       <SessionForm datetime={this.state.datetime} board={this.state.board} description={this.state.description}/>
     </div> 
   );
