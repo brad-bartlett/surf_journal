@@ -12,6 +12,7 @@ class App extends Component {
         datetime: `${new Date()}`,
         board: '',
         description: ''}
+        
   }
     
 

@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 
 
-
-
 export default class SessionForm extends Component {
     
     handleSubmit(e) {
@@ -10,31 +8,25 @@ export default class SessionForm extends Component {
         e.preventDefault()
     }
 
-    handleChange(e) {
-        this.setState({
-            datetime: e.target.datetime,
-            board: e.target.board,
-            description: e.target.description
-        })
-    }
+    handleChange = (e) => this.setState({ [e.target.name]: e.target.value });
     
-    render(props) {
+    render() {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <label>
                         Date:
-                        <input type="datetime-local" value={this.props.datetime} onChange={this.handleChange} />
+                        <input type="datetime-local" value={this.props.datetime} onChange={this.handleChange.bind(this)} />
                     </label> <br/>
 
                     <label>
                         Board:
-                        <input type="text" value={this.props.board} onChange={this.handleChange} />
+                        <input type="text" value={this.props.board} onChange={this.handleChange.bind(this)} />
                     </label><br/>
 
                     <label>
                         Description:
-                        <input type="text" value={this.props.description} onChange={this.handleChange} />
+                        <input type="text" value={this.props.description} onChange={this.handleChange.bind(this)} />
                     </label><br/>
 
                     <button type="submit" class="btn btn-primary">Submit</button>
