@@ -11,6 +11,7 @@ class SessionsController < ApplicationController
         render json: @session, status: 200
         else
             render json: {error:"Error logging session"}
+        end
     end
 
 
@@ -32,4 +33,4 @@ class SessionsController < ApplicationController
     end
 
 end
-end
+
