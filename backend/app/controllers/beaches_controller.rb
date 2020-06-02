@@ -1,4 +1,4 @@
-class Api::v1:BeachesController < ApplicationController
+class BeachesController < ApplicationController
 
     def index
         @beaches = Beach.all

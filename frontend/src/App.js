@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import './App.css';
 import Navbar from './layout/Navbar';
 import Sessions from './components/Sessions'
 import SessionForm from './components/SessionForm'
@@ -16,8 +15,9 @@ class App extends Component {
         
   }
     
-
-
+  componentDidMount() {
+    fetch('http://localhost:3000/sessions')
+  }
   render() {
     return (
     <div className="App">
