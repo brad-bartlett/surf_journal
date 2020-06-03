@@ -29,7 +29,7 @@ export default class SessionForm extends Component {
                         <input type="text" value={this.props.description} onChange={this.handleChange.bind(this)} />
                     </label><br/>
 
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" className="btn btn-primary">Submit</button>
 
                 </form>  
             </div>

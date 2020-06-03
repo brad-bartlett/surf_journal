@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-    resources :sessions
-    resources :beaches
+    resources :sessions do
+        resources :beaches
+    end
 
 end

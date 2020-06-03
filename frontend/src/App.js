@@ -15,9 +15,7 @@ class App extends Component {
         
   }
     
-  componentDidMount() {
-    fetch('http://localhost:3000/sessions')
-  }
+
   render() {
     return (
     <div className="App">

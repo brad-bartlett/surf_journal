@@ -14,7 +14,7 @@ export default function Navbar() {
             <nav>
                 <ul>
                     <li>
-                        <Link exact to='/'>Home</Link>
+                        <Link to='/'>Home</Link>
                     </li>
                     <li>
                         <Link to='/surf'>Session Journal</Link>
