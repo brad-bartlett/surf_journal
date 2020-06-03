@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import Navbar from './layout/Navbar';
+import Navbar from './components/Navbar';
 import Sessions from './components/Sessions'
 import SessionForm from './components/SessionForm'
 
