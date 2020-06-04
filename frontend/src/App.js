@@ -1,28 +1,20 @@
 import React, {Component} from 'react'
 import Navbar from './components/Navbar';
-import Sessions from './components/Sessions'
 import {connect} from 'react-redux'
-import FetchBeaches from './actions/FetchBeaches'
+import BeachesContainer from './containers/BeachesContainer';
+import SessionsContainer from './containers/SessionsContainer';
 
 
 
 class App extends Component {
   
-  constructor() {
-    super()
-    this.state={
-        datetime: `${new Date()}`,
-        board: '',
-        description: ''}
-        
-  }
-    
 
   render() {
     return (
     <div className="App">
       <Navbar />
-      <Sessions />
+      <BeachesContainer />
+      <SessionsContainer />
       
     </div> 
   );
@@ -30,4 +22,4 @@ class App extends Component {
 
 
 
-export default connect(null, {FetchBeaches})(App);
+export default connect()(App);
