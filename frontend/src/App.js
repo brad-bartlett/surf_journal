@@ -1,7 +1,9 @@
 import React, {Component} from 'react'
 import Navbar from './components/Navbar';
 import Sessions from './components/Sessions'
-import SessionForm from './components/SessionForm'
+import {connect} from 'react-redux'
+import FetchBeaches from './actions/FetchBeaches'
+
 
 
 class App extends Component {
@@ -21,9 +23,11 @@ class App extends Component {
     <div className="App">
       <Navbar />
       <Sessions />
-      <SessionForm datetime={this.state.datetime} board={this.state.board} description={this.state.description}/>
+      
     </div> 
   );
 }}
 
-export default App;
+
+
+export default connect(null, {FetchBeaches})(App);
