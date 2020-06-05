@@ -1,9 +1,17 @@
 import React from 'react'
 
-export default function Sessions() {
+const Sessions = (props) => {
     return (
         <div>
-            Sessions list
+            {props.sessions.map(session => 
+            <li key={session.id}> 
+            {session.beach} 
+            {session.board} 
+            {session.date} 
+            {session.description}
+            </li>)}
         </div>
     )
-}
+            }
+
+export default Sessions
