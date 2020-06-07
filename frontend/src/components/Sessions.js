@@ -3,7 +3,7 @@ import React from 'react'
 const Sessions = (props) => {
     return (
         <div>
-            {props.sessions.map(session => 
+            {props.sessions.map((session) => 
             <li key={session.id}> 
             {session.beach} 
             {session.board} 
