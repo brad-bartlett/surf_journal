@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
         if @session.save
         render json: @session, status: 200
         else
-            render json: {error:"Error logging session"}
+            render json: {error:"Error logging session, please try again"}
         end
     end
 

@@ -3,9 +3,7 @@ import React, { Component } from 'react'
 
 export default class SessionForm extends Component {
     
-    // constructor(props) {
-    //     state: ""
-    // }
+ 
     handleSubmit(e) {
         alert('Submitted:' + this.state.value);
         e.preventDefault()

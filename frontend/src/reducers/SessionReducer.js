@@ -1,6 +1,4 @@
 
-
-
 export default function SessionReducer(state = {sessions: []}, action) {
     switch (action.type){
         case 'FETCH_SESSIONS':

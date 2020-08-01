@@ -12,14 +12,11 @@ export default function Navbar() {
     <Router>
         <div>
             <nav>
-                <ul>
-                    <li>
-                        <Link to='/'>Home</Link>
-                    </li>
-                    <li>
-                        <Link to='/surf'>Session Journal</Link>
-                    </li>
-                </ul>
+                
+                <Link to='/'>Home</Link>
+                   
+                <Link to='/surf'>Session Journal</Link>
+                 
             </nav>
         </div>
     </Router>
