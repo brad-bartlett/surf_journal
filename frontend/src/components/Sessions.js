@@ -13,6 +13,6 @@ const Sessions = (props) => {
             </ul>)}
         </div>
     )
-            }
+}
 
 export default Sessions
