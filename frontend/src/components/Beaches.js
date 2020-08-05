@@ -1,29 +1,28 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import Beach from './Beach';
 
 export default function Beaches() {
-    const [beaches, setBeaches] = useState({})
+    const [data, setData] = useState({beaches: []})
+    // const [hasError, setErrors] = useState(false)
 
-
-    function getBeaches(){
-        let res = axios.get('http://localhost:3000/beaches');
-        console.log(res)
-        let beaches = res.data;
-        console.log(beaches)
-        
-    }
+   
+        useEffect(() => {
+            const fetchBeaches = async () => {
+                const result = await axios('http://localhost:3000/beaches');
+                setData(result.data);}
+                fetchBeaches();
+            }, [])
+                
+        console.log(data)
 
 
     return (
 
-
         <div>
-            {beaches.map(beach => 
-                
-                <Beach beach={beach} />
-                
-            )}
+            {data.map(beach => (
+                <button>{beach.name}</button>
+            ))}
         </div>
     )
 }

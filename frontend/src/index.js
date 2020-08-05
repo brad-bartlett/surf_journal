@@ -20,6 +20,6 @@ let store = createStore(SessionReducer, composeEnhancers(applyMiddleware(thunk))
       <App />
     </Provider>,
   
-  document.getElementById('root')
+  document.getElementById('root') 
 );
 
