@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-// import {addSession} from '../actions/addSession'
+import {addSession} from '../actions/addSession'
 
 
-export default class SessionForm extends Component {
+class SessionForm extends Component {
     state={
         date: '',
         board: '',
@@ -48,3 +48,5 @@ export default class SessionForm extends Component {
         )
     }
 }
+
+export default connect(null, {addSession})(SessionForm)
