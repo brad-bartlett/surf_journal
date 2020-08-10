@@ -10,7 +10,7 @@ import {
 export default function Navbar() {
     return (
     <Router>
-        <div>
+        <div className="navbar">
             <nav>
                 
                 <Link to='/'>Home</Link>

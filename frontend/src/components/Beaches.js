@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Beach from './Beach'
 
 export default function Beaches() {
   const [beaches, setBeaches] = useState([]);
-  // const [hasError, setErrors] = useState(false)
+
 
   useEffect(() => {
     const fetchBeaches = async () => {
@@ -17,7 +18,7 @@ export default function Beaches() {
   return (
     <ul>
       {beaches.map((beach) => (
-        <button key={beach.id}>{beach.name}</button>
+        <Beach key={beach.id} beach={beach} />
       ))}
     </ul>
   );

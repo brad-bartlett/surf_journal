@@ -13,7 +13,7 @@ export class SessionsContainer extends Component {
 
     render() {
         return (
-            <div>
+            <div className="sessions">
                 <SessionForm />
                 <Sessions sessions={this.props.sessions}/>    
             </div>
