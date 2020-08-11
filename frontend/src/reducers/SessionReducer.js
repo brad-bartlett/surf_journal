@@ -5,15 +5,9 @@ export default function SessionReducer(state = {sessions: []}, action) {
             return {
                 sessions: action.payload
             }
-        case 'ADD_SESSION':
-            let beaches = state.beaches.map(beach => {
-                if (beach.id === action.payload.id){
-                    return action.payload
-                } else {
-                    return beach
-                }
-            })
-                return {...state, beaches: beaches}
+            case 'ADD_SESSION':
+                return {...state, sessions: [...state.sessions, action.payload]}
+                
         
             default:
             return state
