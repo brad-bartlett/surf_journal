@@ -4,7 +4,7 @@ import Beach from './Beach'
 import SessionsContainer from '../containers/SessionsContainer'
 
 export default function Beaches({beaches}) {
-const [currentBeach, setCurrentBeach] = useState({})
+const [currentBeach, setCurrentBeach] = useState('')
 
 
 //   useEffect(() => {
