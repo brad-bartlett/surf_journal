@@ -16,9 +16,9 @@ export default function Navbar() {
                 
                 <Link to='/'>Home</Link>
                    
-                <Link to='/journal' render={BeachesContainer} >Session Journal</Link>
+                <Link className="ml-5" to='/journal' render={BeachesContainer} >Session Journal</Link>
 
-                
+
 
 
                  

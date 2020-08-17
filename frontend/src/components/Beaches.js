@@ -24,7 +24,7 @@ const [currentBeach, setCurrentBeach] = useState('')
             ))}
         </ul>
         <div className="sessions-container">
-            <SessionsContainer currentBeach={currentBeach}/>
+            <SessionsContainer currentBeach={currentBeach}/> 
         </div>
     </div>
   );
