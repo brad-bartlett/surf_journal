@@ -6,14 +6,14 @@ import {Provider} from 'react-redux';
 import './index.css';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import SessionReducer from './reducers/SessionReducer';
+import BeachReducer from './reducers/BeachReducer';
 
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 
 
-let store = createStore(SessionReducer, composeEnhancers(applyMiddleware(thunk)))
+let store = createStore(BeachReducer, composeEnhancers(applyMiddleware(thunk)))
   
   ReactDOM.render(
     <Provider store={store}>

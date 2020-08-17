@@ -3,7 +3,8 @@ import {
     BrowserRouter as Router, 
     // Switch,
     // Route,
-    Link} from "react-router-dom"
+    Link} from "react-router-dom";
+import BeachesContainer from '../containers/BeachesContainer';
 
 
 
@@ -15,7 +16,11 @@ export default function Navbar() {
                 
                 <Link to='/'>Home</Link>
                    
-                <Link to='/surf'>Session Journal</Link>
+                <Link to='/journal' render={BeachesContainer} >Session Journal</Link>
+
+                
+
+
                  
             </nav>
         </div>

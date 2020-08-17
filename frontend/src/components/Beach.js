@@ -1,11 +1,19 @@
-import React from 'react'
+import React, {useState} from 'react';
 
-export default function Beach({beach}) {
+
+
+export default function Beach({beach, onClick}) {
+
+
     
     
+    
+
     return (
-        <div>
-            <button key={beach.id}>{beach.name}</button>
-        </div>
+        
+        <ul>
+            <button className="btn btn-secondary" key={beach.id} onClick={onClick}>{beach.name}</button>
+        </ul>
+        
     )
 }

@@ -3,7 +3,7 @@ import React from 'react';
 const Sessions = (props) => {
     return (
         <React.Fragment>
-        <div>
+        {/* <div>
             You have logged {props.sessions.length} sessions
             {props.sessions.map(session => 
             <ul key={session.id}>
@@ -13,7 +13,7 @@ const Sessions = (props) => {
             <li>Date: {session.date}</li>
             <li>Description: {session.description}</li>
             </ul>)}
-        </div>
+        </div> */}
         </React.Fragment>
     )
 }

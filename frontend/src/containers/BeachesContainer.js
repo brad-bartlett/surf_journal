@@ -1,26 +1,33 @@
 import React, { Component } from 'react'
 import Beaches from '../components/Beaches';
+import {connect} from 'react-redux'
+import {fetchBeaches} from '../actions/fetchBeaches'
 
 
 
 export class BeachesContainer extends Component {
 
+    componentDidMount() {
+        this.props.fetchBeaches()
+    }
 
     render() {
         
         return(
             <div>
                 
-                <Beaches />
+                <Beaches beaches={this.props.beaches} />
             
             </div>
         )
     }
 }
 
-// const mapStateToProps = state => {
-//     return {
-//         sessions: state.beaches
-//     }
-// }
-export default BeachesContainer
+
+const mapStateToProps = state => {
+    return {
+        beaches: state.beaches
+    }
+}
+
+export default connect(mapStateToProps, {fetchBeaches})(BeachesContainer)
