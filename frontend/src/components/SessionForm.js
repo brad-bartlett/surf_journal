@@ -4,7 +4,10 @@ import {addSession} from '../actions/addSession'
 
 
 class SessionForm extends Component {
-    state={
+
+    
+    state= {
+        beach: '',
         date: '',
         board: '',
         description: ''
@@ -12,12 +15,14 @@ class SessionForm extends Component {
  
     handleSubmit = (event) => {
         event.preventDefault()
-        this.props.addSession(this.state)
         this.setState({
+        beach: this.props.currentBeach,
           date: '',
           board: '',
           description: ''
         })
+        this.props.addSession(this.state)
+        
       }
 
     handleChange = (e) => this.setState({ [e.target.name]: e.target.value });

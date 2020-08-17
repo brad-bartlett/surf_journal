@@ -4,7 +4,7 @@ import SessionForm from '../components/SessionForm'
 // import {connect} from 'react-redux'
 // import {fetchSessions} from '../actions/fetchSessions'
 
-const SessionsContainer = () => {
+const SessionsContainer = ({currentBeach}) => {
 
     // componentDidMount() {
     //     this.props.fetchSessions()
@@ -14,8 +14,8 @@ const SessionsContainer = () => {
 
         return (
             <div className="sessions">
-                <SessionForm />
-                <Sessions />    
+                <SessionForm currentBeach={currentBeach}/>
+                <Sessions currentBeach={currentBeach}/>    
             </div>
         )
     

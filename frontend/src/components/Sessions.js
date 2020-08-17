@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Sessions = (props) => {
+const Sessions = ({currentBeach}) => {
     return (
         <React.Fragment>
-        {/* <div>
-            You have logged {props.sessions.length} sessions
+        <div>
+            {/* You have logged {props.sessions.length} sessions
             {props.sessions.map(session => 
             <ul key={session.id}>
             Session {session.id}:
@@ -12,8 +12,9 @@ const Sessions = (props) => {
             <li>Board: {session.board}</li>
             <li>Date: {session.date}</li>
             <li>Description: {session.description}</li>
-            </ul>)}
-        </div> */}
+            </ul>)} */}
+            {/* {currentBeach.sessions.date} */}
+        </div>
         </React.Fragment>
     )
 }
