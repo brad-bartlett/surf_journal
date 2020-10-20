@@ -10,12 +10,13 @@ const SessionsContainer = ({currentBeach}) => {
     //     this.props.fetchSessions()
     // }
 
-
+    console.log('currentBeach', currentBeach)
 
         return (
             <div className="sessions">
-                <SessionForm currentBeach={currentBeach}/>
-                <Sessions currentBeach={currentBeach}/>    
+                {currentBeach &&  
+                <SessionForm currentBeach={currentBeach}/> }
+                <Sessions currentBeach={currentBeach}/> 
             </div>
         )
     

@@ -19,7 +19,9 @@ const [currentBeach, setCurrentBeach] = useState('')
     <div>
         <ul>
             {beaches.map(beach => (
-            <Beach key={beach.id} beach={beach} onClick={() => setCurrentBeach({beach})} />
+            <Beach key={beach.id} beach={beach} onClick={() => 
+              setCurrentBeach({beach})
+            } />
             ))}
         </ul>
         <div className="sessions-container">

@@ -6,25 +6,29 @@ import {addSession} from '../actions/addSession'
 class SessionForm extends Component {
 
     
-
-    state= {
-        beach: this.props.currentBeach.name,
+ constructor(props) {
+     super(props);
+     console.log('props', props);
+     this.state= {
         date: '',
         board: '',
         description: ''
     }
+ }
  
     handleSubmit = (event) => {
         event.preventDefault()
         this.setState({
-        beach: '',
           date: '',
           board: '',
           description: ''
-          
         })
-        this.props.addSession(this.state)
-        
+
+        const req = {
+            ...this.state,
+            beach: this.props.currentBeach.beach.name
+        }
+        this.props.addSession(req)
       }
 
     
@@ -32,8 +36,12 @@ class SessionForm extends Component {
     handleChange = (e) => this.setState({ [e.target.name]: e.target.value });
     
     render() {
+
+        const {currentBeach} = this.props;
+        console.log('this.props', currentBeach);
         return (
             <div className="session-container ml-5">
+                <h1>{currentBeach.beach.name}</h1>
                 <form onSubmit={this.handleSubmit}>
                     <label>
                         Date:
