@@ -4,8 +4,8 @@ const Sessions = ({currentBeach}) => {
     return (
         <React.Fragment>
         <div>
-            {/* You have logged {props.sessions.length} sessions
-            {props.sessions.map(session => 
+            {/* You have logged {currentBeach.sessions.length} sessions
+            {currentBeach.sessions.map(session => 
             <ul key={session.id}>
             Session {session.id}:
             <li>Beach: {session.beach.name}</li>
@@ -13,7 +13,6 @@ const Sessions = ({currentBeach}) => {
             <li>Date: {session.date}</li>
             <li>Description: {session.description}</li>
             </ul>)} */}
-            {/* {currentBeach.sessions.date} */}
         </div>
         </React.Fragment>
     )

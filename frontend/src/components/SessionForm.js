@@ -24,11 +24,11 @@ class SessionForm extends Component {
           description: ''
         })
 
-        const req = {
+        const request = {
             ...this.state,
-            beach: this.props.currentBeach.beach.name
+            beach: this.props.currentBeach.beach.id
         }
-        this.props.addSession(req)
+        this.props.addSession(request)
       }
 
     
@@ -38,10 +38,10 @@ class SessionForm extends Component {
     render() {
 
         const {currentBeach} = this.props;
-        console.log('this.props', currentBeach);
+        console.log(currentBeach);
         return (
             <div className="session-container ml-5">
-                <h1>{currentBeach.beach.name}</h1>
+                <h1>{currentBeach.name}</h1>
                 <form onSubmit={this.handleSubmit}>
                     <label>
                         Date:

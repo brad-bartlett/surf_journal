@@ -29,8 +29,7 @@ class SessionsController < ApplicationController
     private
 
     def session_params
-        params.require(:beach).permit(:date, :board, :description)
+        params.require(:session).permit(:beach_id, :date, :board, :description)
     end
-
 end
 

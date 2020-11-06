@@ -20,7 +20,7 @@ const [currentBeach, setCurrentBeach] = useState('')
         <ul>
             {beaches.map(beach => (
             <Beach key={beach.id} beach={beach} onClick={() => 
-              setCurrentBeach({beach})
+              setCurrentBeach(beach)
             } />
             ))}
         </ul>
