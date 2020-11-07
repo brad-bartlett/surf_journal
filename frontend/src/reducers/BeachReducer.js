@@ -4,15 +4,6 @@ export default function beachReducer(state = {beaches: []}, action) {
       return {beaches: action.payload}
     case 'ADD_SESSION':
       return {...state, beaches: [...state.beaches, action.payload]}
-    // case 'ADD_BEACH':
-    //   let beaches = state.beaches.map(beach => {
-    //     if (beach.id === action.payload.id) {
-    //       return action.payload
-    //     } else {
-    //       return beach
-    //     }
-    //   })
-    //   return {...state, beaches: beaches}
     case 'DELETE_SESSION':
       let beachesTwo = state.beaches.map(beach => {
         if (beach.id === action.payload.id) {

@@ -1,10 +1,12 @@
 import React from 'react';
 
 const Sessions = ({currentBeach}) => {
+    console.log('session', currentBeach);
+    if (currentBeach) {
     return (
         <React.Fragment>
         <div>
-            {/* You have logged {currentBeach.sessions.length} sessions
+            You have logged {currentBeach.sessions.length} sessions
             {currentBeach.sessions.map(session => 
             <ul key={session.id}>
             Session {session.id}:
@@ -12,10 +14,13 @@ const Sessions = ({currentBeach}) => {
             <li>Board: {session.board}</li>
             <li>Date: {session.date}</li>
             <li>Description: {session.description}</li>
-            </ul>)} */}
+            </ul>)}
         </div>
         </React.Fragment>
     )
+    } else {
+        return null
+    }
 }
 
 export default Sessions
