@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Sessions = ({currentBeach}) => {
-    console.log('session', currentBeach);
+    
     if (currentBeach) {
     return (
         <React.Fragment>
