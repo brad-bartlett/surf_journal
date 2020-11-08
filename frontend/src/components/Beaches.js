@@ -3,16 +3,8 @@ import Beach from './Beach'
 import SessionsContainer from '../containers/SessionsContainer'
 
 export default function Beaches({beaches}) {
+
 const [currentBeach, setCurrentBeach] = useState('')
-
-
-//   useEffect(() => {
-//     const fetchBeaches = async () => {
-//       const result = await axios("http://localhost:3000/beaches");
-//       setBeaches(result.data);
-//     };
-//     fetchBeaches();
-//   }, []);
 
 
   return (

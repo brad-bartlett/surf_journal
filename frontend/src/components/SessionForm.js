@@ -8,7 +8,6 @@ class SessionForm extends Component {
     
  constructor(props) {
      super(props);
-     console.log('props', props);
      this.state= {
         date: '',
         board: '',
@@ -38,7 +37,7 @@ class SessionForm extends Component {
     render() {
 
         const {currentBeach} = this.props;
-        console.log(currentBeach);
+
         return (
             <div className="session-container ml-5">
                 <h1>{currentBeach.name}</h1>
