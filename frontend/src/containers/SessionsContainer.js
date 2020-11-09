@@ -24,8 +24,8 @@ const SessionsContainer = ({currentBeach}) => {
 
 // const mapStateToProps = state => {
 //     return {
-//         sessions: state.sessions
+//         sessions: state.session.sessions
 //     }
 // }
-// export default connect(mapStateToProps, {fetchSessions})(SessionsContainer)
+// export default connect(mapStateToProps, {session.fetchSessions})(SessionsContainer)
 export default SessionsContainer;

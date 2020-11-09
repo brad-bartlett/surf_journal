@@ -1,7 +1,7 @@
 export const addSession = (data) => {
-
+  console.log(data)
   return (dispatch) => {
-    fetch('http://localhost:3000/sessions', {
+    fetch(`http://localhost:3000/sessions`, {
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'

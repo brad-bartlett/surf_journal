@@ -26,7 +26,7 @@ export class BeachesContainer extends Component {
 
 const mapStateToProps = state => {
     return {
-        beaches: state.beaches
+        beaches: state.beach.beaches
     }
 }
 
