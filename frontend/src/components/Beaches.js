@@ -9,16 +9,16 @@ const [currentBeach, setCurrentBeach] = useState('')
 
   return (
     <div>
-        <ul>
+        <ul className="row">
             {beaches.map(beach => (
             <Beach key={beach.id} beach={beach} onClick={() => 
               setCurrentBeach(beach)
             } />
             ))}
         </ul>
-        <div className="session-form">
+        {currentBeach && (<div className="session-form">
             <SessionForm currentBeach={currentBeach}/> 
-        </div>
+        </div>)}
     </div>
   );
 }

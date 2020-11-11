@@ -1,8 +1,10 @@
 import React, {Component} from 'react'
 import Navbar from './components/Navbar';
 import {connect} from 'react-redux'
-import BeachesContainer from './containers/BeachesContainer';
-
+import { Route, Switch } from "react-router";
+import { BrowserRouter } from "react-router-dom";
+import BeachesContainer from "./containers/BeachesContainer";
+import { SessionsContainer } from "./containers/SessionsContainer";
 
 
 class App extends Component {
@@ -11,9 +13,22 @@ class App extends Component {
   render() {
     return (
     <div className="App">
+      <BrowserRouter>
       <Navbar />
-      <BeachesContainer />
       
+          <Switch>
+            <Route
+              path={`/sessions`}
+              component={SessionsContainer}
+              exact={true}
+            />
+            <Route
+              path={`/beaches`}
+              component={BeachesContainer}
+              exact={true}
+            />
+          </Switch>
+        </BrowserRouter>
     </div> 
   );
 }}

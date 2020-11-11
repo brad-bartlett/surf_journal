@@ -8,6 +8,7 @@ import {fetchBeaches} from '../actions/fetchBeaches'
 export class BeachesContainer extends Component {
 
     componentDidMount() {
+        console.log('featch beach')
         this.props.fetchBeaches()
     }
 
@@ -15,9 +16,7 @@ export class BeachesContainer extends Component {
         
         return(
             <div>
-                
                 <Beaches beaches={this.props.beaches} />
-            
             </div>
         )
     }

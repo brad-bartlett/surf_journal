@@ -1,15 +1,9 @@
 import React from 'react';
 
-
-
 export default function Beach({beach, onClick}) {
-
-
     return (
-        
-        <ul>
+        <li className="d-inline float-left ml-3 mb-2">
             <button className="btn btn-secondary" key={beach.id} onClick={onClick}>{beach.name}</button>
-        </ul>
-        
+        </li>            
     )
 }

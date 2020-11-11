@@ -1,31 +1,21 @@
-import React, { Component } from 'react'
+import React, { useEffect } from 'react'
 import Sessions from '../components/Sessions'
-import {connect} from 'react-redux'
 import {fetchSessions} from '../actions/fetchSessions'
+import { useDispatch, useSelector } from 'react-redux';
 
+export const SessionsContainer = () =>  {
 
-export class SessionsContainer extends Component {
+    const sessions = useSelector((state ) => state.session.sessions);
 
+    const dispatch = useDispatch();
 
-    componentDidMount() {
-        this.props.fetchSessions()
-    }
-
-    render() {
+    useEffect(() => {
+        dispatch(fetchSessions);
+    }, [dispatch])
         
-        return (
-            <div className="sessions">
-                <Sessions sessions={this.props.sessions}/> 
-            </div>
-        )
-    
+    return (
+        <div className="sessions">
+            <Sessions sessions={sessions}/> 
+        </div>
+    )
 }
-}
-
-const mapStateToProps = state => {
-    return {
-        sessions: state.session.sessions
-    }
-}
-
-export default connect(mapStateToProps, {fetchSessions})(SessionsContainer)

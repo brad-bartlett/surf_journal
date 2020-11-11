@@ -39,8 +39,10 @@ class SessionForm extends Component {
         const {currentBeach} = this.props;
 
         return (
-            <div className="session-container ml-5">
-                <h1>{currentBeach.name}</h1>
+            <div className="row ml-5 mt-4">
+                <div className="row">
+                    <h1 className="col-12">{currentBeach.name}</h1>
+                </div>
                 <form onSubmit={this.handleSubmit}>
                     <label>
                         Date:

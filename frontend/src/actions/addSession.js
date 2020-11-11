@@ -1,5 +1,5 @@
 export const addSession = (data) => {
-  console.log(data)
+  console.log(data);
   return (dispatch) => {
     fetch(`http://localhost:3000/sessions`, {
       headers: {
@@ -10,7 +10,14 @@ export const addSession = (data) => {
       body: JSON.stringify(data)
     })
     .then(response => response.json())
-    .then(session => dispatch({type: 'ADD_SESSION', payload: session}))
+    .then(session => {
+      console.log('session',session);
+      if(session.error) {
+        console.log('Error while adding session');
+        return;
+      } 
+      dispatch({type: 'ADD_SESSION', payload: session})
+    })
   }
 
 }
