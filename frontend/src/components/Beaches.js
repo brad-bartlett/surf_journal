@@ -9,7 +9,7 @@ const [currentBeach, setCurrentBeach] = useState('')
 
   return (
     <div>
-        <ul className="row">
+        <ul className="row mt-4">
             {beaches.map(beach => (
             <Beach key={beach.id} beach={beach} onClick={() => 
               setCurrentBeach(beach)

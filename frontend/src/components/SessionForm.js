@@ -45,7 +45,7 @@ class SessionForm extends Component {
                 </div>
                 <form onSubmit={this.handleSubmit}>
                     <label>
-                        Date:
+                        Date & time:
                         <input className="ml-2 mt-2" type="datetime-local" value={this.props.datetime} name="date" onChange={this.handleChange} />
                     </label> <br/>
 
