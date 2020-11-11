@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Beach from './Beach'
-import SessionsContainer from '../containers/SessionsContainer'
+import SessionForm from './SessionForm'
 
 export default function Beaches({beaches}) {
 
@@ -16,8 +16,8 @@ const [currentBeach, setCurrentBeach] = useState('')
             } />
             ))}
         </ul>
-        <div className="sessions-container">
-            <SessionsContainer currentBeach={currentBeach}/> 
+        <div className="session-form">
+            <SessionForm currentBeach={currentBeach}/> 
         </div>
     </div>
   );

@@ -4,7 +4,7 @@ import {
     // Switch,
     // Route,
     Link} from "react-router-dom";
-import BeachesContainer from '../containers/BeachesContainer';
+import SessionsContainer from '../containers/SessionsContainer';
 
 
 
@@ -16,7 +16,7 @@ export default function Navbar() {
                 
                 <Link to='/'>Home</Link>
                    
-                <Link className="ml-5" to='/journal' render={BeachesContainer} >Session Journal</Link>
+                <Link className="ml-5" to='/sessions' render={SessionsContainer}>Sessions</Link>
 
 
 

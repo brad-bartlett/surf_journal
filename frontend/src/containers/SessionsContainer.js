@@ -1,31 +1,31 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Sessions from '../components/Sessions'
-import SessionForm from '../components/SessionForm'
-// import {connect} from 'react-redux'
-// import {fetchSessions} from '../actions/fetchSessions'
+import {connect} from 'react-redux'
+import {fetchSessions} from '../actions/fetchSessions'
 
-const SessionsContainer = ({currentBeach}) => {
 
-    // componentDidMount() {
-    //     this.props.fetchSessions()
-    // }
+export class SessionsContainer extends Component {
 
-    console.log('currentBeach', currentBeach)
 
+    componentDidMount() {
+        this.props.fetchSessions()
+    }
+
+    render() {
+        
         return (
             <div className="sessions">
-                {currentBeach &&  
-                <SessionForm currentBeach={currentBeach}/> }
-                <Sessions currentBeach={currentBeach}/> 
+                <Sessions sessions={this.props.sessions}/> 
             </div>
         )
     
 }
+}
 
-// const mapStateToProps = state => {
-//     return {
-//         sessions: state.session.sessions
-//     }
-// }
-// export default connect(mapStateToProps, {session.fetchSessions})(SessionsContainer)
-export default SessionsContainer;
+const mapStateToProps = state => {
+    return {
+        sessions: state.session.sessions
+    }
+}
+
+export default connect(mapStateToProps, {fetchSessions})(SessionsContainer)
