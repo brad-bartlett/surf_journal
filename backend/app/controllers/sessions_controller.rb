@@ -6,9 +6,10 @@ class SessionsController < ApplicationController
     end
 
     def create
-        @session = Session.new(session_params)
+        @beach = Beach.find(params[:beach_id])
+        @session = @beach.sessions.build(session_params)
         if @session.save
-        render json: @session, status: 200
+            render json: @session, status: 200
         else
             render json: {error:"Error logging session, please try again"}
         end
@@ -29,7 +30,7 @@ class SessionsController < ApplicationController
     private
 
     def session_params
-        params.require(:session).permit(:beach_id, :date, :board, :description)
+        params.require(:session).permit(:beach, :date, :board, :description)
     end
 end
 

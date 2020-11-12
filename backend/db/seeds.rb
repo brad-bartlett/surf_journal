@@ -16,5 +16,5 @@ beach = Beach.create(name: 'Avalon')
 beach = Beach.create(name: 'Whale')
 
 
-session = Session.create!(beach: 1, date: Date.today(), board: 'fish', description: 'Great!')
-session = Session.create!(beach: 2, date: Date.today(), board: 'mini mal', description: 'Great!!!')
+# session = Session.create!(beach: 'Whale', date: Date.today(), board: 'fish', description: 'Great!')
+# session = Session.create!(beach: 'Avalon', date: Date.today(), board: 'mini mal', description: 'Great!!!')

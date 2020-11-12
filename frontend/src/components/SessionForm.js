@@ -25,7 +25,7 @@ class SessionForm extends Component {
 
         const request = {
             ...this.state,
-            beach: this.props.currentBeach.id
+            beach_id: this.props.currentBeach.id
         }
         this.props.addSession(request)
       }

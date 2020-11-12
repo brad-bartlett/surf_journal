@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2020_05_19_061759) do
     t.datetime "date"
     t.string "board"
     t.string "description"
+    t.index ["beach_id"], name: "index_sessions_on_beach_id"
   end
 
 end
