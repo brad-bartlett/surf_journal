@@ -8,7 +8,6 @@ import {fetchBeaches} from '../actions/fetchBeaches'
 export class BeachesContainer extends Component {
 
     componentDidMount() {
-        console.log('featch beach')
         this.props.fetchBeaches()
     }
 

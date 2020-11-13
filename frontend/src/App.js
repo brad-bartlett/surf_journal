@@ -4,8 +4,8 @@ import {connect} from 'react-redux'
 import { Route, Switch } from "react-router";
 import { BrowserRouter } from "react-router-dom";
 import BeachesContainer from "./containers/BeachesContainer";
-import { SessionsContainer } from "./containers/SessionsContainer";
-// import { Home } from "./components/Home";
+import SessionsContainer from "./containers/SessionsContainer";
+import Home from "./components/Home";
 
 
 class App extends Component {
@@ -18,11 +18,11 @@ class App extends Component {
       <Navbar />
       
           <Switch>
-          {/* <Route
+          <Route
               path={`/`}
               component={Home}
               exact={true}
-            /> */}
+            />
             <Route
               path={`/sessions`}
               component={SessionsContainer}
