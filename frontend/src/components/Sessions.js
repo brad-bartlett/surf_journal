@@ -8,7 +8,7 @@ export default function Sessions({sessions}) {
         <div>
           {sessions && sessions.length && (
             <>
-              <p>You have logged {sessions.length} sessions</p>
+              <p className="ml-5 mt-3">You have logged {sessions.length} sessions</p>
               <ul>
                 {sessions.map((session) => (
                   <Session key={session.id} session={session} />

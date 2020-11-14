@@ -4,14 +4,14 @@ const Session = ({session}) => {
     
     return (
         <React.Fragment>
-        <ul>
-            <ul key={session.id}>
+        <ul className="mt-2">
+            <li key={session.id}>
             Session {session.id}:
-            <li>Beach: {session.beach.name}</li>
-            <li>Board: {session.board}</li>
-            <li>Date: {session.date}</li>
-            <li>Description: {session.description}</li>
-            </ul>
+            <ul>Beach: {session.beach.name}</ul>
+            <ul>Board: {session.board}</ul>
+            <ul>Date: {session.date}</ul>
+            <ul>Description: {session.description}</ul>
+            </li>
         </ul>
         </React.Fragment>
     )
