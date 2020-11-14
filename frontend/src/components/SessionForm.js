@@ -28,6 +28,8 @@ class SessionForm extends Component {
             beach_id: this.props.currentBeach.id
         }
         this.props.addSession(request)
+        document.getElementById("submit-form").reset()
+        alert("Your sessions has been logged sucessfully")
       }
 
     
@@ -43,7 +45,7 @@ class SessionForm extends Component {
                 <div className="row">
                     <h1 className="col-12">{currentBeach.name}</h1>
                 </div>
-                <form onSubmit={this.handleSubmit}>
+                <form id="submit-form" onSubmit={this.handleSubmit}>
                     <label>
                         Date & time:
                         <input className="ml-2 mt-2" type="datetime-local" value={this.props.datetime} name="date" onChange={this.handleChange} />
