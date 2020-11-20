@@ -6,14 +6,12 @@ import { BrowserRouter } from "react-router-dom";
 import BeachesContainer from "./containers/BeachesContainer";
 import SessionsContainer from "./containers/SessionsContainer";
 import Home from "./components/Home";
-import Images from './images/Images';
 import './index.css';
 
 
 
 class App extends Component {
   
-
   render() {
     return (
     <div className="App" >
@@ -21,7 +19,7 @@ class App extends Component {
       <Navbar />
       
           <Switch>
-          <Route
+            <Route
               path={`/`}
               component={Home}
               exact={true}
